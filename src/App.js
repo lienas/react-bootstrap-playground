@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import {Alert, Container} from "react-bootstrap";
+import DarkModeSwitcher from "./component/DarkModeSwitcher";
+import Navigation from "./component/Navigation";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Navigation/>
+            <Container>
+                <DarkModeSwitcher/>
+                <h1 class="text-primary">Hello World</h1>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere sapiente! Ab aperiam
+                    assumenda cum debitis dolores ducimus eaque hic itaque labore laboriosam libero nisi perspiciatis,
+                    quas,
+                    quasi reiciendis repudiandae similique tenetur. Blanditiis eveniet obcaecati ullam veniam vero. A
+                    asperiores at blanditiis dicta dolorem doloremque ducimus est et ex expedita labore, maiores minima
+                    nam
+                    necessitatibus nobis pariatur praesentium quae quisquam sunt suscipit totam veniam vitae voluptatum.
+                    A
+                    adipisci excepturi impedit neque nihil! Accusamus, aliquam fugit labore magnam modi molestiae nobis,
+                    optio perferendis, praesentium quo reprehenderit soluta tempore temporibus ullam vel? Asperiores,
+                    blanditiis totam? Dolor excepturi necessitatibus nisi quis, ratione vel.</p>
+                <Alert variant='info'>Das sind die ersten Gehversuche mit dem Framework</Alert>
+
+            </Container>
+        </div>
+    );
 }
 
 export default App;
