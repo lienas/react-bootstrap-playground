@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import {Alert, Container} from "react-bootstrap";
 import DarkModeSwitcher from "./component/DarkModeSwitcher";
 import Navigation from "./component/Navigation";
@@ -9,8 +9,8 @@ function App() {
             <Navigation/>
             <Container>
                 <DarkModeSwitcher/>
-                <h1 class="text-primary">Hello World</h1>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere sapiente! Ab aperiam
+                <h1>Hello World</h1>
+                <p className='text-light bg-dark p-1'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere sapiente! Ab aperiam
                     assumenda cum debitis dolores ducimus eaque hic itaque labore laboriosam libero nisi perspiciatis,
                     quas,
                     quasi reiciendis repudiandae similique tenetur. Blanditiis eveniet obcaecati ullam veniam vero. A
