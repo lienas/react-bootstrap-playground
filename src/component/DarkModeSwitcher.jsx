@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
 import Form from "react-bootstrap/Form";
+import {useDarkMode} from "../helpers/useDarkMode";
 
 const toggleBodyClasses = isDarkMode => {
     if (isDarkMode) {
@@ -15,15 +15,14 @@ const toggleBodyClasses = isDarkMode => {
 
 const DarkModeSwitcher = () => {
 
-    const [darkMode, setDarkMode] = useState(true);
+    const {state, actions} = useDarkMode();
+
+    console.log(state.darkMode);
 
     const handleChange = () => {
         console.log("change called !!" )
-        toggleBodyClasses(!darkMode);
-        setDarkMode((prevState => {
-            return !prevState
-        }));
-
+        toggleBodyClasses(!state.darkMode);
+        actions.switchDarkMode(!state.darkMode);
     }
 
     return (
@@ -33,6 +32,7 @@ const DarkModeSwitcher = () => {
                 id="custom-switch"
                 label="Darkmode"
                 onChange={handleChange}
+                checked={state.darkMode}
             />
         </Form>
     );

@@ -1,9 +1,18 @@
 import './App.scss';
-import {Alert, Container} from "react-bootstrap";
+import {Alert, Button, Card, Container} from "react-bootstrap";
 import DarkModeSwitcher from "./component/DarkModeSwitcher";
 import Navigation from "./component/Navigation";
+import {useDarkMode} from "./helpers/useDarkMode";
 
 function App() {
+
+    const {state} = useDarkMode();
+    console.log(useDarkMode());
+    console.log("darkmode from app", state.darkMode);
+    const cardStyle = state.darkMode ? "my-4 bg-dark" : "my-4 bg-light";
+
+    console.log("cardStyle ", cardStyle);
+
     return (
         <div className="App">
             <Navigation/>
@@ -22,6 +31,21 @@ function App() {
                     optio perferendis, praesentium quo reprehenderit soluta tempore temporibus ullam vel? Asperiores,
                     blanditiis totam? Dolor excepturi necessitatibus nisi quis, ratione vel.</p>
                 <Alert variant='info'>Das sind die ersten Gehversuche mit dem Framework</Alert>
+                <h2>cards</h2>
+
+                <Card style={{ width: '18rem' }} className= {cardStyle}>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                            Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </Card.Text>
+                        <Button variant="outline-danger">Go somewhere</Button>
+                    </Card.Body>
+                </Card>
+
+                <Button variant="outline-primary" >Test-Button</Button>
 
             </Container>
         </div>
