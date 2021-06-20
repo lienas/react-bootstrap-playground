@@ -1,0 +1,21 @@
+/* make the customizations */
+$primary: darkorange;
+$dark: #212529;
+$info: teal;
+//$warning: amber;
+
+$theme-colors: (
+        'primary': $primary,
+        "info": $info,
+        "dark": $dark,
+  //"warning": $warning
+);
+
+body.bg-dark {
+  p, h1, h2, h3, h4, h5, h6 {
+    color: white;
+  }
+}
+
+//@import "./custom.scss";
+@import "~bootstrap/scss/bootstrap";
