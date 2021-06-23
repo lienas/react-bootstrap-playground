@@ -3,9 +3,10 @@
 //import StyleSwitcher from "./component/StyleSwitcher";
 import "./app.scss";
 import AppBar from "./component/AppBar";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import Book from "./component/Book";
 import {Container} from "react-bootstrap";
+import BookList from "./component/BookList";
 
 function App() {
 
@@ -17,7 +18,13 @@ function App() {
                 <AppBar/>
                 <Switch>
                     <Route exact path='/'>
-                        <Container><h1>Home</h1></Container>
+                        <Container>
+                            <h1>Home</h1>
+                            <Link to='/book/0'>Buch</Link>
+                        </Container>
+                    </Route>
+                    <Route path='/books'>
+                        <BookList/>
                     </Route>
                     <Route path='/book/:id'>
                         <Container>

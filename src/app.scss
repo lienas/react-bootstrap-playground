@@ -17,5 +17,30 @@ body.bg-dark {
   }
 }
 
+.text-dark, .text-body {
+  p {
+    color: $dark !important;
+  }
+}
+
+.MenuOverlay {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(10, 10, 10, .85);
+  padding-top: 1em;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.z999 {
+  z-index: 999;
+}
+
 //@import "./custom.scss";
 @import "~bootstrap/scss/bootstrap";

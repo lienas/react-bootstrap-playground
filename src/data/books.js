@@ -27,5 +27,37 @@ export const books = [
         "page": {},
         "attachments": {},
         "publish": {}
+    },
+    {
+        "_id": "6339e941-84f5-4404-897f-b903d19030dd",
+        "_name": "requiem",
+        "_path": "/lyn-konner/secrectum/requiem",
+        "creator": "user:system:su",
+        "modifier": "user:system:su",
+        "createdTime": "2021-06-23T14:39:58.641198200Z",
+        "modifiedTime": "2021-06-23T14:41:07.161407300Z",
+        "owner": "user:system:su",
+        "type": "de.osde.lyn:book",
+        "displayName": "Requiem",
+        "hasChildren": true,
+        "valid": true,
+        "childOrder": "modifiedtime DESC",
+        "data": {
+            "content": "<p>Der zwielichtige Dr. Franken wird dabei beobachtet, wie er seinen Chef, den Leiter des Instituts für Kirchenmusik in Wien brutal erdrosselt. Dem Beobachter gelingt es, ungesehen zu entkommen, nachdem er einen wertvollen Brief in seinen Besitz gebracht hat, der dem Ermordeten gehörte. Er ahnt nicht, dass er sich damit zur Zielscheibe der geheimen Burschenschaft „Alumni Pegos“ macht.</p>\n\n<p>Während die Wiener Polizei im Dunkeln tappt, wird die Kölner Anwältin Dr. Katharina Marvin in die Entführung einer Mandantin verwickelt. Sie verfolgt eine Spur, die weit in die Vergangenheit zurückreicht und sie bis nach Wien führt. Als es ihr gelingt, sich als Sekretärin bei Dr. Franken einzuschleusen, bemerkt sie nicht, dass die „Alumni Pegos“ sie längst enttarnt und ihren Tod beschlossen haben…</p>\n",
+            "ISBN11": "000-0-00000-000-0",
+            "author": "Lyn Konner",
+            "cover": "/media/MURequiem.png"
+        },
+        "x": {
+            "de-osde-lyn": {
+                "menu-item": {
+                    "menuItem": false
+                }
+            }
+        },
+        "page": {},
+        "attachments": {},
+        "publish": {}
     }
+
 ]
