@@ -2,12 +2,14 @@
 $primary: darkorange;
 $dark: #212529;
 $info: teal;
+$secondary: lighten(#212529, 5);
 //$warning: amber;
 
 $theme-colors: (
         'primary': $primary,
         "info": $info,
         "dark": $dark,
+        "secondary": $secondary
   //"warning": $warning
 );
 
@@ -41,6 +43,56 @@ body.bg-dark {
 .z999 {
   z-index: 999;
 }
+
+//Videobanner
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: -100;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  min-height:100vh;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  background-color: black;
+  z-index: -101;
+}
+
+.banner-overlay {
+  display: flex;
+  position: absolute;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+
+.banner-overlay-text {
+  color: white;
+  position:absolute;
+}
+
+.banner-enter {
+  opacity: 0;
+}
+
+.banner-enter-active, .banner-enter-appear {
+  opacity: 1;
+  transition: opacity 8000ms
+}
+
 
 //@import "./custom.scss";
 @import "~bootstrap/scss/bootstrap";
