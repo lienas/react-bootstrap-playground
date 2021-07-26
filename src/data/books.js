@@ -19,7 +19,7 @@ export const books = [
             "series": "Secretum",
             "episode": 1,
             "author": "Lyn Konner",
-            "published": "2020-02-22",
+            "published": "2021-10-22",
             "pages": 280,
             "cover": "/media/MUReliquie-1.png"
         },

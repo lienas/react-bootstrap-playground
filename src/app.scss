@@ -3,13 +3,15 @@ $primary: darkorange;
 $dark: #212529;
 $info: teal;
 $secondary: lighten(#212529, 5);
+$light: whitesmoke;
 //$warning: amber;
 
 $theme-colors: (
         'primary': $primary,
         "info": $info,
         "dark": $dark,
-        "secondary": $secondary
+        "secondary": $secondary,
+        "light": $light
   //"warning": $warning
 );
 
@@ -55,10 +57,11 @@ body.bg-dark {
   overflow: hidden;
   z-index: -100;
 }
+
 .hero {
   position: relative;
   width: 100%;
-  min-height:100vh;
+  min-height: 100vh;
   padding: 0;
   justify-content: space-between;
   align-items: center;
@@ -81,7 +84,7 @@ body.bg-dark {
 
 .banner-overlay-text {
   color: white;
-  position:absolute;
+  position: absolute;
 }
 
 .banner-enter {
@@ -93,6 +96,90 @@ body.bg-dark {
   transition: opacity 8000ms
 }
 
+//hero-Banner
+.hero-banner {
+  height: 95vH;
+  width: auto;
+}
+
+.hero-banner-item {
+  min-height: 95vH;
+}
+
+//Menu
+.nav-link {
+  width: max-content;
+  color: white !important;
+}
+
+.nav-link.active {
+  h3, h4, h5, h6, li {
+    color: $primary;
+  }
+}
+
+.nav-link:hover {
+  color: $primary !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+//back to top
+.scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+/***
+Button to scroll down
+Should be placed in a relative positioned Container
+
+ */
+.scrollDown {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  opacity: 0.75;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+// Flip-Count-Down
+.countdown {
+  margin: 5px 0px;
+  div.countdown-count {
+    height: 2.5em;
+    width: 2.5em;
+    padding: 0.5em;
+    color: white;
+    background-color: $dark;
+    transition: transform 1s;
+    perspective: 500px;
+    &:hover {
+      transform: rotateX(360deg);
+    }
+  }
+
+  div.countdown-caption {
+    font-size: 0.8em;
+  }
+}
 
 //@import "./custom.scss";
 @import "~bootstrap/scss/bootstrap";

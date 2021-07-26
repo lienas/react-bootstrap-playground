@@ -21,14 +21,14 @@ const AppBar = () => {
             {show ?
                 <div className='MenuOverlay'>
                     <Container>
-                        <Nav className='flex-column'>
-                            <Nav.Item>
+                        <Nav className='flex-column align-items-center' as='ul'>
+                            <Nav.Item as='li'>
                                 <Nav.Link onClick={() => navigate('/')}><h3 className='h1'>Home</h3></Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
+                            <Nav.Item as='li'>
                                 <Nav.Link onClick={() => navigate('/book/0')}><h3 className='h1'>Buch</h3></Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
+                            <Nav.Item as='li'>
                                 <Nav.Link onClick={() => navigate('/books')}><h3 className='h1'>Alle Bücher</h3>
                                 </Nav.Link>
                             </Nav.Item>
