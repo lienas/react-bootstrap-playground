@@ -53,5 +53,9 @@ const BookCountdown = (props) => {
 export default BookCountdown;
 
 BookCountdown.propTypes = {
-    date: PropTypes.instanceOf(Date).isRequired
-};
+    date: PropTypes.oneOfType([
+        PropTypes.instanceOf(Date),
+        PropTypes.string,
+        PropTypes.number
+    ]).isRequired
+}

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {books} from "../data/books";
-import {Button, Card, CardGroup, Col, Container, Row} from "react-bootstrap";
-import HeroBanner from "./HeroBanner";
+import {Button, Card, Col, Container, Row} from "react-bootstrap";
 import BackToTop from "./BackToTop";
 import BannerCarousel from "./BannerCarousel";
 //import

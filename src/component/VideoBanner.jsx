@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import BannerOverlay from "../shared/BannerOverlay";
 import {Alert, Container} from "react-bootstrap";
 import PropTypes from 'prop-types';

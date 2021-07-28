@@ -3,19 +3,23 @@ import {useParams} from 'react-router-dom'
 import {books} from "../data/books";
 import {Button, Col, Container, Image, Row} from "react-bootstrap";
 import * as PropTypes from "prop-types";
-import {ArrowDownCircle} from "react-bootstrap-icons";
 import ScrollButton from "./ScrollButton";
-import FlipCountDown from '@rumess/react-flip-countdown'
 import BookCountdown from "./BookCountdown";
+import Rating from "react-rating";
+import {BookRating} from "./BookRating";
+
 function Column(props) {
     return null;
 }
 
 Column.propTypes = {children: PropTypes.node};
+
 const Book = () => {
     const [book, setBook] = useState({});
+    const [rating, setRating] = useState(3);
     const {id} = useParams();
     console.log('Component Book called wit id=', id);
+    console.log('Rating is =', rating);
 
     useEffect(() => {
         setBook(books[id]);
@@ -31,6 +35,8 @@ const Book = () => {
     if (!bookdetails) {
         return <h2>Lade ...</h2>
     }
+
+
 
     return (
         <>
@@ -51,6 +57,15 @@ const Book = () => {
                             /> </> :
                             `erschienen am ${bookdetails.published}`
                         }
+
+                        <Rating
+                            initialRating={rating}
+                            emptySymbol={<BookRating color='white' size={3}/>}
+                            fullSymbol={<BookRating color='teal' size={3}/>}
+                            onChange={(rate) => setRating(rate)}
+                            className={'my-3'}
+                        />
+
                         <div dangerouslySetInnerHTML={{__html: bookdetails.content}}/>
                         <Button>Kaufen</Button>
                         <Button className='mx-1' variant='info'>mehr erfahren</Button>

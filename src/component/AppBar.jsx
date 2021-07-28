@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import {Button, Container, Nav, Navbar, NavItem} from "react-bootstrap";
 import {List, X} from 'react-bootstrap-icons'
 import {Link, useHistory} from "react-router-dom";

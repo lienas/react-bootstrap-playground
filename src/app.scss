@@ -181,5 +181,11 @@ Should be placed in a relative positioned Container
   }
 }
 
+//rating
+.star {
+  color: #ff9933;
+  cursor: pointer;
+}
+
 //@import "./custom.scss";
 @import "~bootstrap/scss/bootstrap";
