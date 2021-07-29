@@ -7,6 +7,7 @@ import ScrollButton from "./ScrollButton";
 import BookCountdown from "./BookCountdown";
 import Rating from "react-rating";
 import {BookRating} from "./BookRating";
+import RatingForm from "./RatingForm";
 
 function Column(props) {
     return null;
@@ -65,6 +66,7 @@ const Book = () => {
                             onChange={(rate) => setRating(rate)}
                             className={'my-3'}
                         />
+                        <RatingForm/>
 
                         <div dangerouslySetInnerHTML={{__html: bookdetails.content}}/>
                         <Button>Kaufen</Button>
