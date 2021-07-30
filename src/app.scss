@@ -4,6 +4,7 @@ $dark: #212529;
 $info: teal;
 $secondary: lighten(#212529, 5);
 $light: whitesmoke;
+$danger: lighten(red, 15);
 //$warning: amber;
 
 $theme-colors: (
@@ -11,7 +12,8 @@ $theme-colors: (
         "info": $info,
         "dark": $dark,
         "secondary": $secondary,
-        "light": $light
+        "light": $light,
+        "danger":$danger
   //"warning": $warning
 );
 

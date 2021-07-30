@@ -59,13 +59,13 @@ const Book = () => {
                             `erschienen am ${bookdetails.published}`
                         }
 
-                        <Rating
-                            initialRating={rating}
-                            emptySymbol={<BookRating color='white' size={3}/>}
-                            fullSymbol={<BookRating color='teal' size={3}/>}
-                            onChange={(rate) => setRating(rate)}
-                            className={'my-3'}
-                        />
+                        {/*<Rating*/}
+                        {/*    initialRating={rating}*/}
+                        {/*    emptySymbol={<BookRating color='white' size={3}/>}*/}
+                        {/*    fullSymbol={<BookRating color='teal' size={3}/>}*/}
+                        {/*    onChange={(rate) => setRating(rate)}*/}
+                        {/*    className={'my-3'}*/}
+                        {/*/>*/}
                         <RatingForm/>
 
                         <div dangerouslySetInnerHTML={{__html: bookdetails.content}}/>
