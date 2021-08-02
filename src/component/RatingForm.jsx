@@ -7,10 +7,12 @@ import Rating from "react-rating";
 
 const RatingForm = () => {
 
-    const {register, control, handleSubmit, setValue, formState: {errors, isValid, isDirty}, trigger} = useForm();
+    const {register, control, handleSubmit, setValue, formState: {errors, isValid, isDirty}, trigger} = useForm({
+        mode:"onBlur"
+    });
     const [rating, setRating] = useState(0);
 
-    console.log("form-state:", errors);
+    console.log("form-state:", errors );
 
     const TextInput = ({onChange, onBlur, label, state, value, ...props}) => {
         console.log("state:", state);
@@ -61,8 +63,10 @@ const RatingForm = () => {
                         emptySymbol={<BookRating color='white' size={3}/>}
                         fullSymbol={<BookRating color='teal' size={3}/>}
                         className={'my-3'}
+                        {...register("rating",{min:1})}
                         onChange={(val) => {
                             setValue("ratingValue", val);
+                            setValue("rating", val);
                             setRating(val);
                             trigger("ratingValue");
                         }}
@@ -94,7 +98,7 @@ const RatingForm = () => {
 
                     </Form.Group>
 
-                    <Button className='mt-3' onClick={handleSubmit(onSubmit)}>Bewertung senden</Button>
+                    <Button disabled={!isDirty} className='mt-3' onClick={handleSubmit(onSubmit)}>Bewertung senden</Button>
 
                 </Form>
             </Col>
